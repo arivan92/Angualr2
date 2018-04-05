@@ -1,0 +1,39 @@
+<h1>{{firstname}}</h1>
+<br>
+<a href="javascript:void(0);" [innerHtml]="clickText">Test</a>
+<br>
+<a href="javascript:void(0);" bind-innerHtml="clickText">Test</a>
+<br>
+<h3>TEST</h3>
+<br>
+
+<table border="1" *ngIf="showHide">
+    <tr>
+        <td attr.colspan="{{colSpan}}">TEST</td>
+    </tr>
+    <tr>
+        <td>TEST</td>
+        <td>TEST</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="colSpan">TEST</td>
+    </tr>
+</table>
+
+<br>
+
+<h1 [class]="myClass" [class.next]="apply">TEST CLASS BINDING</h1>
+
+<br>
+
+<h1 [ngClass]="addClass()">TEST CLASS BINDING</h1>
+
+<br>
+
+<a [style.font-weight]="isBold ? 'bold' : 'normal'">TEST</a>
+<a [style.fontSize.px]="fontSize">TEST</a>
+
+<br>
+
+<input type="button" value="Click" (click)="clickBtn()">
+

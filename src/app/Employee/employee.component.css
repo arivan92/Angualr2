@@ -1,0 +1,11 @@
+h3 {
+    color: blueviolet;
+}
+
+.bind{
+    color: red;
+}
+
+.next{
+    cursor: pointer;
+}

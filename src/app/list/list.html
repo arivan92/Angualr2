@@ -1,0 +1,28 @@
+<count [all]='allCount()' [male]='maleCount()' [female]='femaleCount()' (countEmit)="receiveSelVal($event)"></count>
+
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Index</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let det of list;let i = index;let first = first;let last = last;trackBy:trackByCode">
+            <tr *ngIf="rSelVal == 'All' || det.gender == rSelVal">
+                <td>{{ det.name | lowercase }}</td>
+                <td>{{ det.Age | listSample }}</td>
+                <td>{{ i }}</td>
+                <td>{{ first }}</td>
+                <td>{{ last }}</td>
+                <td>{{ det.dob | date: 'dd-MM-yyyy' }}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

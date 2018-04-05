@@ -6,5 +6,5 @@ import { Component } from "@angular/core"
 })
 
 export class FirstComponent{
-    firstName:string = 'Arivan';
+    public firstName:string = 'Arivan';
 }

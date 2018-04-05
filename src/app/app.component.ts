@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1><first-app></first-app>`,
+  template: `<list></list>`
 })
-export class AppComponent  { name = 'Arivan S'; }
+
+export class AppComponent {
+  public name:string = 'Arivan';
+  public lname:string = 'Arivan';
+}

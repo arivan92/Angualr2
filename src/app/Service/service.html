@@ -1,0 +1,17 @@
+<table class="postTable">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let post of post">
+            <td><a [routerLink]="['/service', post.title]">{{post.title}}</a></td>
+            <td><a [routerLink]="['/another', post.author]">{{post.author}}</a></td>
+        </tr>
+    </tbody>
+
+</table>

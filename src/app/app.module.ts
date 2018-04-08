@@ -16,6 +16,8 @@ import { RouteparamComponent } from './Service/routeparam.components'
 import { AnotherComponent } from './Service/another.component'
 import { NewComponent } from './Service/new.components'
 import { GetComment } from './Service/get.comments'
+import { sameOne } from './Same/one.components'
+import { sameTwo } from './Same/two.component'
 
 const myRoute: Routes = [
   { path: 'list', component: ListComponent },
@@ -25,11 +27,13 @@ const myRoute: Routes = [
   { path: 'another/:code', component: AnotherComponent },
   { path: 'new', component: NewComponent },
   { path: 'comment/:id', component: GetComment },
+  { path: 'one', component: sameOne },
+  { path: 'two', component: sameTwo }
 ]
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(myRoute, {useHash:true}) ],
-  declarations: [ AppComponent, FirstComponent, EmployeeComponent, ListComponent, ListSamplePipe, CountComponent, HooksComponent, ServiceComponent, RouteparamComponent, AnotherComponent, NewComponent, GetComment ],
+  declarations: [ AppComponent, FirstComponent, EmployeeComponent, ListComponent, ListSamplePipe, CountComponent, HooksComponent, ServiceComponent, RouteparamComponent, AnotherComponent, NewComponent, GetComment, sameOne, sameTwo ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
